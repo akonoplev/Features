@@ -13,6 +13,7 @@
 		9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E0C210CD77E00DC7285 /* +StoryboardExtension.swift */; };
 		9A204E10210CD96F00DC7285 /* First.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A204E0F210CD96F00DC7285 /* First.storyboard */; };
 		9A204E12210CD98A00DC7285 /* FirstModuleStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E11210CD98A00DC7285 /* FirstModuleStartVC.swift */; };
+		9A204E15210DA0B600DC7285 /* howdo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E14210DA0B600DC7285 /* howdo.swift */; };
 		9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */; };
 		9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEC2103BDAB0084A860 /* ViewController.swift */; };
 		9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEE2103BDAB0084A860 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		9A204E0C210CD77E00DC7285 /* +StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+StoryboardExtension.swift"; sourceTree = "<group>"; };
 		9A204E0F210CD96F00DC7285 /* First.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = First.storyboard; sourceTree = "<group>"; };
 		9A204E11210CD98A00DC7285 /* FirstModuleStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstModuleStartVC.swift; sourceTree = "<group>"; };
+		9A204E14210DA0B600DC7285 /* howdo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = howdo.swift; sourceTree = "<group>"; };
 		9AE6DEE72103BDAB0084A860 /* RxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE6DEEC2103BDAB0084A860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		9A204E13210DA09400DC7285 /* howdo */ = {
+			isa = PBXGroup;
+			children = (
+				9A204E14210DA0B600DC7285 /* howdo.swift */,
+			);
+			path = howdo;
+			sourceTree = "<group>";
+		};
 		9AE6DEDE2103BDAB0084A860 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 				9AEB3EB1210CD6E400623996 /* FiirstModule */,
 				9AEB3EB3210CD6F900623996 /* SecondModule */,
 				9A204E0E210CD78300DC7285 /* extensions */,
+				9A204E13210DA09400DC7285 /* howdo */,
 				9AE6DF182103BDBC0084A860 /* other */,
 			);
 			path = RxSwiftApp;
@@ -431,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */,
+				9A204E15210DA0B600DC7285 /* howdo.swift in Sources */,
 				9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */,
 				9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,
