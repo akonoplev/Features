@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 
     }
 
+
     
 }
 
@@ -25,6 +26,10 @@ class ViewController: UIViewController {
 extension ViewController {
     @IBAction func tapToGoFirstModule(_ sender: Any) {
         router.navigate(to: .first, navigationController: self.navigationController!)
+    }
+    
+    @IBAction func tapToGoSecondModule(_ sender: Any) {
+        router.navigate(to: .second, navigationController: self.navigationController!)
     }
 }
 

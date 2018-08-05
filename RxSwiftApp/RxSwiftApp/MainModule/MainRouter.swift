@@ -51,6 +51,7 @@ extension MainRouter {
     }
     
     public func createSecondModuleVC()-> UIViewController {
-        return UIViewController()
+        let vc = storyboards.second.instantiateViewController(withIdentifier: "secondModuleVC") as! SecondModuleVC
+        return vc
     }
 }
