@@ -25,6 +25,9 @@
 		9AE6DF002103BDB10084A860 /* RxSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEFF2103BDB10084A860 /* RxSwiftAppTests.swift */; };
 		9AE6DF0B2103BDB10084A860 /* RxSwiftAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DF0A2103BDB10084A860 /* RxSwiftAppUITests.swift */; };
 		B4B88C59493024F63C060DEB /* Pods_RxSwiftAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F51659EAFAD09ED70D19060 /* Pods_RxSwiftAppTests.framework */; };
+		E2D80FCC212714500037714B /* ThirdModuleStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D80FCB212714500037714B /* ThirdModuleStartVC.swift */; };
+		E2D80FCE212714620037714B /* Third.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D80FCD212714620037714B /* Third.storyboard */; };
+		E2F9101C21271CCA001646B3 /* +extensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9101B21271CCA001646B3 /* +extensionUIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		A87C8D89434A22E972646D2A /* Pods-RxSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF299D078B64D0A1F31FC43B /* Pods-RxSwiftAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppTests/Pods-RxSwiftAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFA859BBCC1E64B043A0A62F /* Pods-RxSwiftAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppUITests/Pods-RxSwiftAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2D80FCB212714500037714B /* ThirdModuleStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModuleStartVC.swift; sourceTree = "<group>"; };
+		E2D80FCD212714620037714B /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
+		E2F9101B21271CCA001646B3 /* +extensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionUIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9A204E0C210CD77E00DC7285 /* +StoryboardExtension.swift */,
+				E2F9101B21271CCA001646B3 /* +extensionUIImage.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 				9AEB3EB4210CD70300623996 /* MainModule */,
 				9AEB3EB1210CD6E400623996 /* FiirstModule */,
 				9AEB3EB3210CD6F900623996 /* SecondModule */,
+				E2D80FCA212714160037714B /* ThirdModule */,
 				9A204E0E210CD78300DC7285 /* extensions */,
 				9A204E13210DA09400DC7285 /* howdo */,
 				9A204E162115F58600DC7285 /* Resources */,
@@ -243,6 +251,15 @@
 				9A204E0A210CD76100DC7285 /* MainRouter.swift */,
 			);
 			path = MainModule;
+			sourceTree = "<group>";
+		};
+		E2D80FCA212714160037714B /* ThirdModule */ = {
+			isa = PBXGroup;
+			children = (
+				E2D80FCD212714620037714B /* Third.storyboard */,
+				E2D80FCB212714500037714B /* ThirdModuleStartVC.swift */,
+			);
+			path = ThirdModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +373,7 @@
 				9AE6DEF52103BDB10084A860 /* LaunchScreen.storyboard in Resources */,
 				9AE6DEF22103BDB10084A860 /* Assets.xcassets in Resources */,
 				9A204E1A2115FEC800DC7285 /* Something.txt in Resources */,
+				E2D80FCE212714620037714B /* Third.storyboard in Resources */,
 				9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */,
 				9A204E1C21174BC000DC7285 /* Second.storyboard in Resources */,
 				9A204E10210CD96F00DC7285 /* First.storyboard in Resources */,
@@ -463,6 +481,8 @@
 				9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */,
 				9A204E15210DA0B600DC7285 /* howdo.swift in Sources */,
 				9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */,
+				E2D80FCC212714500037714B /* ThirdModuleStartVC.swift in Sources */,
+				E2F9101C21271CCA001646B3 /* +extensionUIImage.swift in Sources */,
 				9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */,
 				9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,

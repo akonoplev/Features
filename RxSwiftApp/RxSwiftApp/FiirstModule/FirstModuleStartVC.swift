@@ -11,9 +11,7 @@ import RxSwift
 
 //MARK: - Obserable observer subscribe and dispose
 
-class FirstModuleStartVC: UIViewController {
-
-    
+class FirstModuleStartVC: UIViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Rx First Module"

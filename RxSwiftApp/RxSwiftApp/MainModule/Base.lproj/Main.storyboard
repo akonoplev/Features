@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8K-JR-u7g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8K-JR-u7g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,12 +40,26 @@
                                     <action selector="tapToGoSecondModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="4Xf-CE-uL1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-kh-CjI">
+                                <rect key="frame" x="20" y="216" width="335" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="RxThirdModule">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToGoThirdModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="5tk-0M-QDv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="bnh-kh-CjI" secondAttribute="trailing" constant="20" id="0JM-9d-tKT"/>
                             <constraint firstItem="ODU-5y-MGU" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="7D0-cE-QUZ"/>
                             <constraint firstItem="ODU-5y-MGU" firstAttribute="top" secondItem="Mgs-cA-z6c" secondAttribute="top" constant="50" id="YKr-25-nGJ"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="OLz-Xc-8SG" secondAttribute="trailing" constant="20" id="bNo-By-zgB"/>
+                            <constraint firstItem="bnh-kh-CjI" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="kCF-bE-UnE"/>
+                            <constraint firstItem="bnh-kh-CjI" firstAttribute="top" secondItem="OLz-Xc-8SG" secondAttribute="bottom" constant="15" id="pDJ-t6-5fh"/>
                             <constraint firstItem="OLz-Xc-8SG" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="pth-Eo-35u"/>
                             <constraint firstItem="OLz-Xc-8SG" firstAttribute="top" secondItem="ODU-5y-MGU" secondAttribute="bottom" constant="15" id="q0h-Sg-Byf"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="ODU-5y-MGU" secondAttribute="trailing" constant="20" id="wtu-Z6-h5r"/>

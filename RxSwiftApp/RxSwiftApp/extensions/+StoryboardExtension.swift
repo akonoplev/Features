@@ -11,6 +11,7 @@ import UIKit
 enum Storyboards: String {
     case first = "First"
     case second = "Second"
+    case third = "Third"
 }
 
 extension UIStoryboard {

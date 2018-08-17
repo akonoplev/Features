@@ -17,9 +17,6 @@ class ViewController: UIViewController {
         navigationItem.title = "Reactive app"
 
     }
-
-
-    
 }
 
 //MARK: - go to modules
@@ -30,6 +27,11 @@ extension ViewController {
     
     @IBAction func tapToGoSecondModule(_ sender: Any) {
         router.navigate(to: .second, navigationController: self.navigationController!)
+    }
+    
+    
+    @IBAction func tapToGoThirdModule(_ sender: Any) {
+        router.navigate(to: .third, navigationController: self.navigationController!)
     }
 }
 

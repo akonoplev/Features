@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 
+//MARK: - Subjects
+
 class SecondModuleVC: UIViewController {
 
     override func viewDidLoad() {
@@ -16,7 +18,7 @@ class SecondModuleVC: UIViewController {
 //        doPublishSubject()
 //        doBehaviourSubject()
 //        doReplaySubject()
-        doVariable()
+//        doVariable()
     }
     
     
