@@ -80,28 +80,31 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attriburedString = NSMutableAttributedString()
+        let attributedString = NSMutableAttributedString()
         
         switch component {
         case 0:
-            let attrString = NSAttributedString(string: self.dataSource1[row], attributes: [NSAttributedStringKey.foregroundColor : UIColor.black])
-            attriburedString.append(attrString)
+            let attrString = NSAttributedString(string: self.dataSource1[row] , attributes: [NSAttributedStringKey.foregroundColor : UIColor.black])
+            attributedString.append(attrString)
         case 1:
             let string = self.dataSource2[row]
             let attrString = NSAttributedString(string: string, attributes: [NSAttributedStringKey.foregroundColor : UIColor.black])
-            attriburedString.append(attrString)
+            attributedString.append(attrString)
+            
+            // add image to atributed string if isSelected true
             for item in selectedArray {
                 if item == string {
+                    attributedString.append(NSAttributedString(string: " "))
                     let imageAtchement = NSTextAttachment()
                     imageAtchement.image = UIImage(named: "Opened@3x")
                     imageAtchement.bounds = CGRect(x: 0, y: 0, width: 20, height: 20)
                     let imageAttachString = NSAttributedString(attachment: imageAtchement)
-                    attriburedString.append(imageAttachString)
+                    attributedString.append(imageAttachString)
                 }
             }
         default: return nil
         }
-        return attriburedString
+        return attributedString
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -122,6 +125,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func getData(row: Int) {
         self.dataSource2 = dict[dataSource1[row]] ?? [String]()
         self.pickerView.reloadAllComponents()
+
     }
 }
 
