@@ -1,0 +1,6 @@
+framework module Pods_PluralLayoutUITests {
+  umbrella header "Pods-PluralLayoutUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PluralLayout' do
+  pod 'PureLayout'
+  use_frameworks!
+
+  # Pods for PluralLayout
+
+  target 'PluralLayoutTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PluralLayoutUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
