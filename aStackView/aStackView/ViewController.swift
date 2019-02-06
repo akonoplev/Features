@@ -18,7 +18,5 @@ class ViewController: UIViewController {
     @IBAction func tapFirst(_ sender: Any) {
         self.performSegue(withIdentifier: "firstSegue", sender: nil)
     }
-
-
 }
 

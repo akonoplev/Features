@@ -14,6 +14,8 @@
 		B7FBE27C2209DC0C00439C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7FBE27B2209DC0C00439C63 /* Assets.xcassets */; };
 		B7FBE27F2209DC0C00439C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FBE27D2209DC0C00439C63 /* LaunchScreen.storyboard */; };
 		B7FBE28F2209E30000439C63 /* StacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FBE28E2209E30000439C63 /* StacksViewController.swift */; };
+		B7FBE291220B36B400439C63 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FBE290220B36B400439C63 /* AnswerView.swift */; };
+		B7FBE293220B3B9400439C63 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FBE292220B3B9400439C63 /* QuestionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B7FBE27E2209DC0C00439C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7FBE2802209DC0C00439C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7FBE28E2209E30000439C63 /* StacksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksViewController.swift; sourceTree = "<group>"; };
+		B7FBE290220B36B400439C63 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		B7FBE292220B3B9400439C63 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				B7FBE2742209DC0B00439C63 /* AppDelegate.swift */,
 				B7FBE2762209DC0B00439C63 /* ViewController.swift */,
 				B7FBE28E2209E30000439C63 /* StacksViewController.swift */,
+				B7FBE292220B3B9400439C63 /* QuestionCell.swift */,
+				B7FBE290220B36B400439C63 /* AnswerView.swift */,
 				B7FBE2782209DC0B00439C63 /* Main.storyboard */,
 				B7FBE27B2209DC0C00439C63 /* Assets.xcassets */,
 				B7FBE27D2209DC0C00439C63 /* LaunchScreen.storyboard */,
@@ -213,7 +219,9 @@
 			files = (
 				B7FBE2772209DC0B00439C63 /* ViewController.swift in Sources */,
 				B7FBE2752209DC0B00439C63 /* AppDelegate.swift in Sources */,
+				B7FBE291220B36B400439C63 /* AnswerView.swift in Sources */,
 				B7FBE28F2209E30000439C63 /* StacksViewController.swift in Sources */,
+				B7FBE293220B3B9400439C63 /* QuestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -144,9 +144,44 @@
                     <view key="view" contentMode="scaleToFill" id="vft-AA-GaF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-1M-01h">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4mJ-p4-vC8">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="title" id="6Yz-Fs-yhu" customClass="QuestionCell" customModule="aStackView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="EqM-5R-xS9" id="5DA-Vj-fiA"/>
+                                    <outlet property="delegate" destination="EqM-5R-xS9" id="pVb-RC-ssi"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2zd-1M-01h" firstAttribute="leading" secondItem="Vrz-wV-gZt" secondAttribute="leading" id="7C5-DX-fjt"/>
+                            <constraint firstItem="Vrz-wV-gZt" firstAttribute="trailing" secondItem="2zd-1M-01h" secondAttribute="trailing" id="MBR-0z-63O"/>
+                            <constraint firstItem="2zd-1M-01h" firstAttribute="top" secondItem="Vrz-wV-gZt" secondAttribute="top" id="Yme-mN-nN6"/>
+                            <constraint firstItem="Vrz-wV-gZt" firstAttribute="bottom" secondItem="2zd-1M-01h" secondAttribute="bottom" id="f3U-yX-spT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vrz-wV-gZt"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="2zd-1M-01h" id="YyU-gO-mTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Epf-0g-luP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
