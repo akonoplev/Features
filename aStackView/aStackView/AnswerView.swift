@@ -55,23 +55,28 @@ class AnswerView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        self.backgroundColor = UIColor.red
         self.toucheFlag = true
     }
-    
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         if self.toucheFlag {
+            self.backgroundColor = UIColor.white
             self.delegate.didSelect(answer: self.label.text ?? "", question: "Вопрос")
             self.toucheFlag = false
         }
     }
-    
+
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         let touch = event?.allTouches!.first
         let movement = touch!.location(in: self)
-        if movement.y > self.frame.height || movement.y < -self.frame.height {
+        
+        //finger is out frame this view
+        if movement.y > self.bounds.height || movement.y < 0 {
             self.toucheFlag = false
+            self.backgroundColor = UIColor.white
         }
     }
 }
