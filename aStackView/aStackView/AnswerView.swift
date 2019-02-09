@@ -51,32 +51,45 @@ class AnswerView: UIView {
         self.label.autoPinEdge(toSuperviewEdge: .trailing, withInset: 20)
         self.label.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
         self.label.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
+        setupGesture()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        self.backgroundColor = UIColor.red
-        self.toucheFlag = true
+    func setupGesture()-> Void {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        gesture.numberOfTapsRequired = 1
+        self.addGestureRecognizer(gesture)
     }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        if self.toucheFlag {
-            self.backgroundColor = UIColor.white
-            self.delegate.didSelect(answer: self.label.text ?? "", question: "Вопрос")
-            self.toucheFlag = false
-        }
+    
+    @objc func didTap()-> Void {
+        self.backgroundColor = UIColor.white
+        self.delegate.didSelect(answer: self.label.text ?? "", question: "Вопрос")
     }
-
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesMoved(touches, with: event)
-        let touch = event?.allTouches!.first
-        let movement = touch!.location(in: self)
-        
-        //finger is out frame this view
-        if movement.y > self.bounds.height || movement.y < 0 {
-            self.toucheFlag = false
-            self.backgroundColor = UIColor.white
-        }
-    }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesBegan(touches, with: event)
+//        self.backgroundColor = UIColor.red
+//    }
+//
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesEnded(touches, with: event)
+//        self.backgroundColor = UIColor.white
+//    }
+//
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesMoved(touches, with: event)
+//        self.backgroundColor = UIColor.white
+//    }
+    
+    
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesMoved(touches, with: event)
+//        let touch = event?.allTouches!.first
+//        let movement = touch!.location(in: self)
+//
+//        //finger is out frame this view
+//        if movement.y > self.bounds.height || movement.y < 0 {
+//            self.toucheFlag = false
+//            self.backgroundColor = UIColor.white
+//        }
+//    }
 }

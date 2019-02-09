@@ -18,6 +18,7 @@ class StacksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black
+        self.navigationItem.title = "Test"
         
         self.collectionView.collectionViewLayout = collectionViewLayout
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
