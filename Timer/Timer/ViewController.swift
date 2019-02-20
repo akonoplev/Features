@@ -14,13 +14,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timer = SimpleTimer.init(startTime: 600, interval: 1.0, repeats: true) { [weak self] (time) in
-            guard let sself = self else { return }
-            sself.timerLabel.text = time
-        }
-        timer.start()
-    }
+        
+            let timer = SimpleTimer.init(startTime: 600, interval: 1.0, repeats: true) { [weak self] (time) in
+                DispatchQueue.main.async {
+                    guard let sself = self else { return }
+                    sself.timerLabel.text = time
+                }
+            }
 
+            timer.start()
+                
+    }
 
 }
 

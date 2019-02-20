@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class SimpleTimer {
     typealias Tick = (String)->Void
@@ -17,6 +18,8 @@ class SimpleTimer {
     // start
     var startTime: Int
     
+    var backgroundTime: Int?
+    
     init(startTime: Int, interval:TimeInterval, repeats:Bool = false, onTick:@escaping Tick){
         self.interval = interval
         self.repeats = repeats
@@ -25,7 +28,12 @@ class SimpleTimer {
     }
     
     func start(){
-        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: self.interval, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        
+        // work in background
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appReturnFromBackground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     func stop(){
@@ -34,7 +42,7 @@ class SimpleTimer {
     
     @objc func update() {
         startTime -= 1
-        if self.startTime == 0 {
+        if self.startTime <= 0 {
             self.stop()
             tick("0")
         } else if self.startTime < 60 {
@@ -44,7 +52,18 @@ class SimpleTimer {
             let m = (startTime % 3600) % 60
             tick("\(h) : \(m)")
         }
-        
     }
     
+    @objc func appMovedToBackground() -> Void {
+        self.backgroundTime = Int(NSDate().timeIntervalSince1970)
+    }
+    
+    @objc func appReturnFromBackground()-> Void {
+        guard let backgroundTime = self.backgroundTime else { return }
+        
+        let currentTime = Int(NSDate().timeIntervalSince1970)
+        let substractionTime = currentTime - backgroundTime
+        self.startTime -= substractionTime
+        update()
+    }
 }
