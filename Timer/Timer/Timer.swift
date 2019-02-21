@@ -9,16 +9,21 @@
 import Foundation
 import UIKit
 
+protocol TimerDelegate: class {
+    func didTimerEnd()-> Void
+}
+
 class SimpleTimer {
     typealias Tick = (String)->Void
     var timer:Timer?
     var interval:TimeInterval
     var repeats:Bool
     var tick:Tick
+    
     // start
     var startTime: Int
-    
     var backgroundTime: Int?
+    var delegate: TimerDelegate?
     
     init(startTime: Int, interval:TimeInterval, repeats:Bool = false, onTick:@escaping Tick){
         self.interval = interval
@@ -44,7 +49,7 @@ class SimpleTimer {
         startTime -= 1
         if self.startTime <= 0 {
             self.stop()
-            tick("0")
+            self.delegate?.didTimerEnd()
         } else if self.startTime < 60 {
             tick("\(startTime)")
         } else if startTime >= 60 {
