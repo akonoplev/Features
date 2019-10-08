@@ -73,11 +73,14 @@ final class Disposable {
     }
 }
 
+var disposeBag = Disposal()
+
 var a = Observable("Привет")
 let b = Observable("Как дела")
-_ = a.makeObserve(skipFirst: false) { (string) in
+let aDis = a.makeObserve(skipFirst: false) { (string) in
     print(string)
 }
 
 a.value = "ooo"
 a.value = "aaa"
+a.value = "ddd"
