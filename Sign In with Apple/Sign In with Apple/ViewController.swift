@@ -35,8 +35,8 @@ class ViewController: UIViewController {
         request.requestedScopes = [.fullName, .email]
         
         let controller = ASAuthorizationController(authorizationRequests: [request])
-        controller.delegate = self
-        controller.presentationContextProvider = self
+//        controller.delegate = self
+//        controller.presentationContextProvider = self
         
         controller.performRequests()
     }
@@ -48,29 +48,29 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: ASAuthorizationControllerDelegate {
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        switch authorization.credential {
-        case let credentials as ASAuthorizationAppleIDCredential:
-            let user = User(credentials: credentials)
-            self.performSegue(withIdentifier: "toInfoSegue", sender: user)
-        default:
-            break
-        }
-    }
-    
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("auth error: \(error)")
-    }
-    
-    
-}
+//extension ViewController: ASAuthorizationControllerDelegate {
+//    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+//        switch authorization.credential {
+//        case let credentials as ASAuthorizationAppleIDCredential:
+//            let user = User(credentials: credentials)
+//            self.performSegue(withIdentifier: "toInfoSegue", sender: user)
+//        default:
+//            break
+//        }
+//    }
+//    
+//    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+//        print("auth error: \(error)")
+//    }
+//    
+//    
+//}
 
-extension ViewController: ASAuthorizationControllerPresentationContextProviding {
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return view.window!
-    }
-}
+//extension ViewController: ASAuthorizationControllerPresentationContextProviding {
+//    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+//        return view.window!
+//    }
+//}
 
 
 

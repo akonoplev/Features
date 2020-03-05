@@ -296,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Sign In with Apple/Sign In with Apple.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MJY5QF87;
+				DEVELOPMENT_TEAM = 2XS5VLSBUW;
 				INFOPLIST_FILE = "Sign In with Apple/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,7 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Sign In with Apple/Sign In with Apple.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63MJY5QF87;
+				DEVELOPMENT_TEAM = 2XS5VLSBUW;
 				INFOPLIST_FILE = "Sign In with Apple/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
